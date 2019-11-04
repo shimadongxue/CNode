@@ -1,0 +1,37 @@
+.register-form {
+    padding: 30px 10px;
+    text-indent: 10%;
+}
+.register-form p{
+    margin-bottom: 30px;
+    padding: 5px 0;
+}
+.register-form label {
+    display: inline-block;
+    width: 100px;
+    font-size: 14px;
+    color: black;
+}
+.cnode-input {
+    height: 34px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    width: 240px;
+    text-indent: 5px;
+}
+.cnode-input:hover, .cnode-input:focus {
+    border: 1px solid #ccc;
+}
+input:-internal-autofill-selected {
+    background-color: whitesmoke;
+}
+.submit-btn {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid #ccc;
+    text-indent: 0;
+}

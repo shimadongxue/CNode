@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+
+    <meta charset="UTF-8">
+    <title>CNode：Node.js专业中文社区-登录</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="nodejs, node, express, connect, socket.io">
+
+    <meta name="author" content="zhanmengle@163.com">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="icon" href="/public/imgs/cnode_icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/public/css/sidebar.css">
+    <link rel="stylesheet" href="/public/css/register.css">
+</head>
+<body>
+{{include "./_partial/header.html"}}
+
+<div id="main" class="cl">
+    <div id="content">
+        <div class="menu-box">
+            <ul class="menu">
+                <li><a>主页</a></li>
+                <li><a>登录</a></li>
+            </ul>
+        </div>
+        <div class="register-form" id="register_form">
+            <form action="login" method="post">
+                <p>
+                    <label for="email">邮箱:</label>
+                    <input class="cnode-input" type="text" name="email" id="email" />
+                </p>
+                <p>
+                    <label for="password">密码:</label>
+                    <input class="cnode-input" type="text" name="password" id="password" />
+                </p>
+                <p>
+                    <label></label>
+                    <a class="submit-btn" id="submit">登录</a>
+                </p>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="sidebar fr">
+        <div class="panel">
+            <h1>关于</h1>
+            <div class="inner">
+                <p>在这里你可以：</p>
+                <ul>
+                    <li>向别人提出你遇到的问题</li>
+                    <li>帮助遇到问题的人</li>
+                    <li>分享自己的知识</li>
+                    <li>和其它人一起进步</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{{include "./_partial/footer.html"}}
+
+<script src="/public/js/lib/jquery.min.js"></script>
+<script src="/public/js/login.js"></script>
+</body>
+</html>

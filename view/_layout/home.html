@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>CNode：Node.js专业中文社区</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="nodejs, node, express, connect, socket.io">
+
+    <meta name="author" content="zhanmengle@163.com">
+    <link rel="stylesheet" href="/public/css/reset.css">
+    <link rel="stylesheet" href="/public/css/main.css">
+    <link rel="icon" href="/public/imgs/cnode_icon.png" type="image/x-icon">
+    {{block "head"}}{{/block}}
+</head>
+<body>
+    {{include "../_partial/header.html"}}
+
+    <div id="main" class="cl">
+        {{block "body"}}{{/block}}
+
+        {{include "../_partial/sider.html"}}
+    </div>
+
+
+    {{include "../_partial/footer.html"}}
+
+    <script src="/public/js/lib/jquery.min.js"></script>
+
+    {{block "script"}}{{/block}}
+</body>
+</html>
