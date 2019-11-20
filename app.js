@@ -5,10 +5,6 @@ let session = require('express-session')
 let cors = require('cors')
 
 
-
-
-
-
 let router  = require('./router');
 
 let app = express();
@@ -33,7 +29,7 @@ app.use(session({
     secret: 'cnode',
     resave: false,
     saveUninitialized: false
-}))
+}));
 
 app.use(router);
 

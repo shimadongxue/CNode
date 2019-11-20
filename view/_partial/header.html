@@ -1,5 +1,8 @@
 {{block "head"}}
     <link rel="stylesheet" href="/public/css/header.css">
+    <script src="/public/js/lib/jquery.min.js"></script>
+
+    <script src="/public/js/login.js"></script>
 {{/block}}
 
 <div class="nav" id="cnode_header">
@@ -15,8 +18,13 @@
             <li><a>新手入门</a></li>
             <li><a>API</a></li>
             <li><a>关于</a></li>
-            <li><a href="/register">注册</a></li>
-            <li><a href="/login">登录</a></li>
+            {{ if user }}
+            <li>当前登录用户：<a>{{ user.nickname }}</a></li>
+            <li><a class="logout-btn">退出</a></li>
+            {{ else }}
+                <li><a href="/register">注册</a></li>
+                <li><a href="/login">登录</a></li>
+            {{ /if }}
         </ul>
     </div>
 </div>

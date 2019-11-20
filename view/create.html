@@ -3,7 +3,7 @@
 <head>
 
     <meta charset="UTF-8">
-    <title>CNode：Node.js专业中文社区-登录</title>
+    <title>CNode：Node.js专业中文社区</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="nodejs, node, express, connect, socket.io">
 
@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="/public/css/main.css">
     <link rel="icon" href="/public/imgs/cnode_icon.png" type="image/x-icon">
     <link rel="stylesheet" href="/public/css/sidebar.css">
-    <link rel="stylesheet" href="/public/css/register.css">
+    <link rel="stylesheet" href="/public/css/create.css">
 </head>
 <body>
 {{include "./_partial/header.html"}}
@@ -22,25 +22,29 @@
         <div class="menu-box">
             <ul class="menu">
                 <li><a href="/">主页</a></li>
-                <li><a>登录</a></li>
+                <li><a>发布</a></li>
             </ul>
         </div>
-        <div class="register-form" id="register_form">
-            <form action="login" method="post">
-                <p>
-                    <label for="email">邮箱:</label>
-                    <input class="cnode-input" type="text" name="email" id="email" />
-                </p>
-                <p>
-                    <label for="password">密码:</label>
-                    <input class="cnode-input" type="text" name="password" id="password" />
-                </p>
-                <p>
-                    <label></label>
-                    <a class="submit-btn" id="submit">登录</a>
-                </p>
-
-            </form>
+        <div class="create-form" id="register_form">
+            <div class="item">
+                <label>选择版块: </label>
+                <select class="general">
+                    <option value="1">分享</option>
+                    <option value="2">问答</option>
+                    <option value="3">招聘</option>
+                    <option value="4">其它</option>
+                </select>
+            </div>
+            <div class="item">
+                <input class="title" placeholder="标题10个字符以上" value="北京11月14号大风降温">
+                <p>* 请输入10个字符以上</p>
+            </div>
+            <div class="item">
+                <textarea placeholder="请输入内容" class="content" value="从早上7点开始， 局部气温下降到-10度。请市民做好防寒准备。"></textarea>
+            </div>
+            <div class="footer">
+                <span class="submit-btn">提交</span>
+            </div>
         </div>
     </div>
 
@@ -64,6 +68,7 @@
 {{include "./_partial/footer.html"}}
 
 <script src="/public/js/lib/jquery.min.js"></script>
-<script src="/public/js/login.js"></script>
+<script src="/public/js/create.js"></script>
+
 </body>
 </html>

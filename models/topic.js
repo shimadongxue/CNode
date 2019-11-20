@@ -12,24 +12,25 @@ const topicSchema = new Schema({
     title: {
       type: String
     },
+    general: {
+        type: Number,
+        enum: [1, 2, 3, 4],
+        default: 1
+    },
     created_time: {
         type: Date,
         default: Date.now
     },
-    author: {
+    userId: {
         type: String,
     },
-
-
+    content: {
+        type: String,
+    },
     last_modified_time: {
         type: Date,
         default: Date.now
     },
-    avatar: {
-        type: String,
-        default: '/public/imgs/avatar-default.png'
-    },
-
 });
 
 module.exports = mongoose.model('Topic', topicSchema);

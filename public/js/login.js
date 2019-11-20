@@ -8,24 +8,42 @@ $(function () {
             password: $('#password').val()
         };
         $.ajax({
-            url: 'http://127.0.0.1:3001/login',
+            url: '/login',
             method: 'post',
             contentType:"application/json;charset=utf-8",
             data: JSON.stringify(data),
             success: function (res) {
-
                 if ( res.code === 0 ) {
-                    location.href = "http://localhost:3001"
+                    // location.href = "http://localhost:3001"
+                    window.location.href = '/'
                 } else {
                     alert(res.msg)
                 }
 
             },
             fail: function (err) {
-                debugger;
                 console.log(err);
             }
         })
-    })
+    });
+
+    $('.logout-btn').on('click', function () {
+        $.ajax({
+            url: '/logout',
+            method: 'post',
+            contentType:"application/json;charset=utf-8",
+            success:  function (res) {
+                if ( res.code === 0 ) {
+                    // location.href = "http://localhost:3001"
+                    window.location.href = '/login'
+                } else {
+                    alert(res.msg)
+                }
+            },
+            fail: function (err) {
+                console.log(err);
+            }
+        })
+    });
 
 })

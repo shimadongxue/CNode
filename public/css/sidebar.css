@@ -52,3 +52,18 @@ h1 {
 .qrcode img {
     width: 100%;
 }
+.btn {
+    background-color: #80bd01;
+    color: white;
+    width: 85px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    border-radius: 4px;
+}
+.btn:hover {
+    background-color: #6ba44e;
+}

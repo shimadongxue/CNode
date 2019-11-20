@@ -11,6 +11,13 @@
            <a class="github-btn">通过 GitHub 登录</a>
        </div>
     </div>
+    {{ if user }}
+    <div class="panel">
+        <div class="inner">
+            <a class="btn" href="/create">发布话题</a>
+        </div>
+    </div>
+    {{ /if }}
     <div class="panel">
       <div class="inner">
           <ul>
