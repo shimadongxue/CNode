@@ -15,8 +15,20 @@ router.get('/', (req, res) =>{
         } else {
 
             let topics = topic;
+            let ids = [];
+            topics.forEach(item => {
+
+                let id = item.userId;
+               if (ids.indexOf(id) !== -1) {
+                   ids.push(id);
+               }
+            });
             let users = null;
 
+
+            // let FILTER = ids.map()
+
+            // {$or:[{'_id':ObjectId('5da04475eb24f55de4efc0dc')}]}
             User.find({}, (err, user) => {
 
                 if ( err) {
@@ -45,6 +57,7 @@ router.get('/', (req, res) =>{
                     });
 
 
+                    newTopics = newTopics.reverse().slice(0,30);
                     res.render('index.html', {
                         user : req.session.user,
                         topic: newTopics
@@ -73,6 +86,10 @@ router.get('/blog', (req, res) => {
 
 router.get('/login', (req, res) =>{
     res.render('login.html')
+});
+
+router.get('/download', (req, res) =>{
+    res.render('download.html')
 });
 
 router.post('/login', ( req, res)=> {
