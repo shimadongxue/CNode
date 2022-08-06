@@ -21,6 +21,6 @@
     "express-session": "^1.17.0",
     "jquery": "^3.4.1",
     "mongodb": "^3.3.2",
-    "mongoose": "^5.7.4"
+    "mongoose": "^5.7.5"
   }
 }
